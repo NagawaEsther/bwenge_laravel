@@ -46,6 +46,7 @@
                 <input type="date" class="form-control" name="end_date" id="end_date" value="{{ old('end_date', $advert->end_date) }}">
             </div>
 
+           
             <button type="submit" class="btn btn-primary mt-3">Update Advert</button>
         </form>
     </div>

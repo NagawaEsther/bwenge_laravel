@@ -16,9 +16,21 @@
             <textarea name="content" id="content" class="form-control" rows="5" required>{{ old('content') }}</textarea>
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="image" class="form-label">Image</label>
             <input type="file" name="image" id="image" class="form-control">
+        </div> --}}
+
+        <!-- Image Upload Field -->
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="image" id="image" class="form-control">
+            
+            <!-- Display Image Preview if Available -->
+            @if(session('imagePath'))
+                <p>Current Image:</p>
+                <img src="{{ asset('storage/' . session('imagePath')) }}" alt="Uploaded Image" width="150">
+            @endif
         </div>
 
         <div class="mb-3">

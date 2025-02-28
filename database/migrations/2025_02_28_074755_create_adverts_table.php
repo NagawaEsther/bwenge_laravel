@@ -15,8 +15,8 @@ class CreateAdvertsTable extends Migration
             $table->string('title'); // Title of the advert
             $table->string('image')->nullable(); // Advert image
             $table->enum('status', ['active', 'inactive'])->default('active'); // Status of the advert
-            $table->timestamp('start_date')->nullable(); // Start date of the advert
-            $table->timestamp('end_date')->nullable(); // End date of the advert
+            $table->date('start_date')->nullable(); // Start date of the advert
+            $table->date('end_date')->nullable(); // End date of the advert
             $table->timestamps(); // created_at and updated_at columns
         });
     }

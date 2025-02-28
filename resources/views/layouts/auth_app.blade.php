@@ -24,11 +24,12 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="login-brand">
-                        <img src="{{ asset('storage/images/try.png') }}" alt="logo" width="100"
+                        <img src="{{ asset('storage/images/bwenge.jpg') }}" alt="logo" width="200"
                              class="shadow-light">
                     </div>
                     @yield('content')
                     <div class="simple-footer">
+                        
 {{--                        Copyright &copy; {{ getSettingValue('application_name') }}  {{ date('Y') }}--}}
                     </div>
                 </div>

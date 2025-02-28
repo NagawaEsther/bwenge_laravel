@@ -23,14 +23,24 @@
             <textarea name="content" id="content" class="form-control" rows="5" required>{{ old('content', $news->content) }}</textarea>
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="image" class="form-label">Image</label>
             <input type="file" name="image" id="image" class="form-control">
             @if ($news->image)
                 <img src="{{ asset('storage/'.$news->image) }}" alt="News Image" class="mt-2" width="150">
             @endif
-        </div>
+        </div> --}}
 
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" name="image" id="image" class="form-control">
+            
+            @if ($news->image)
+                <p>Current Image:</p>
+                <img src="{{ asset('storage/'.$news->image) }}" alt="News Image" class="mt-2" width="150">
+            @endif
+        </div>
+        
         <div class="mb-3">
             <label for="published_at" class="form-label">Published Date</label>
             <input type="date" name="published_at" id="published_at" class="form-control" value="{{ old('published_at', $news->published_at) }}">

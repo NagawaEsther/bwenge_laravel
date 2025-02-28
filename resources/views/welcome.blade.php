@@ -15,7 +15,7 @@
         }
 
         .header {
-            background-color: Blue; 
+            background-color: maroon; 
             padding: 20px;
             color: white;
             text-align: center;
@@ -40,7 +40,7 @@
         .main h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: Red; 
+            color: maroon; 
         }
 
         .main p {
@@ -53,7 +53,7 @@
             padding: 15px 30px;
             font-size: 1.2rem;
             color: white;
-            background-color: Blue; 
+            background-color: maroon; 
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -66,7 +66,7 @@
         }
 
         .footer {
-            background-color: Red; 
+            background-color: blue; 
             color: white;
             text-align: center;
             padding: 10px 0;

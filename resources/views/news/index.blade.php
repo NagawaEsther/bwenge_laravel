@@ -8,9 +8,10 @@
         <thead>
             <tr>
                 <th>Title</th>
-                <th>Category</th>
+                {{-- <th>Category</th> --}}
                 <th>Published At</th>
                 <th>Status</th>
+                <th>Image</th> 
                 <th class="text-center">Actions</th>
             </tr>
         </thead>
@@ -18,9 +19,19 @@
             @foreach ($news as $article)
                 <tr>
                     <td>{{ $article->title }}</td>
-                    <td>{{ $article->category }}</td>
+                    {{-- <td>{{ $article->category }}</td> --}}
                     <td>{{ $article->published_at ? $article->published_at->format('d M, Y') : 'Not Published' }}</td>
                     <td>{{ $article->status }}</td>
+
+                     <!-- Display image if it exists -->
+                     <td>
+                        @if($article->image)
+                            <img src="{{ asset('storage/' . $article->image) }}" alt="Image" width="100">
+                        @else
+                            No Image
+                        @endif
+                    </td>
+
                     <td class="text-center">
                         <!-- View Icon -->
                         <a href="{{ route('news.show', $article->id) }}" class="btn btn-light btn-sm">

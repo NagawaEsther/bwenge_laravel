@@ -21,6 +21,7 @@
                     <th>Status</th>
                     <th>Start Date</th>
                     <th>End Date</th>
+                    <th>Image</th>
                     <th class="text-center">Actions</th>
                 </tr>
             </thead>
@@ -32,6 +33,16 @@
                         <td>{{ $advert->status }}</td>
                         <td>{{ $advert->start_date }}</td>
                         <td>{{ $advert->end_date }}</td>
+
+                        <td>
+                            <!-- Check if the advert has an image and display it -->
+                            @if($advert->image)
+                                <img src="{{ asset('storage/' . $advert->image) }}" alt="Advert Image" width="100" height="auto">
+                            @else
+                                <span>No Image</span>
+                            @endif
+                        </td>
+                        
                         <td class="text-center">
                             <!-- View Icon -->
                             <a href="{{ route('adverts.show', $advert->id) }}" class="btn btn-light btn-sm">
